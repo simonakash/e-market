@@ -28,6 +28,43 @@
 			.group:hover .hover\:w-full{
 				width: 100%;
 			}
+			.cursor-zoomin{
+				cursor: zoom-in;
+			}
+			/*------scroll bar---------------------*/
+			::-webkit-scrollbar {
+			width: 5px;
+			height: 7px;
+			}
+			::-webkit-scrollbar-button {
+			width: 0px;
+			height: 0px;
+			}
+			::-webkit-scrollbar-thumb {
+			background: #525965;
+			border: 0px none #ffffff;
+			border-radius: 0px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+			background: #525965;
+			}
+			::-webkit-scrollbar-thumb:active {
+			background: #525965;
+			}
+			::-webkit-scrollbar-track {
+			background: transparent;
+			border: 0px none #ffffff;
+			border-radius: 50px;
+			}
+			::-webkit-scrollbar-track:hover {
+			background: transparent;
+			}
+			::-webkit-scrollbar-track:active {
+			background: transparent;
+			}
+			::-webkit-scrollbar-corner {
+			background: transparent;
+			}
 		</style>
 	</head>
 	<body>
@@ -159,96 +196,94 @@
 						</span>
 					</button>
 					<!---------Mobile Menu----------->
-					<nav class="absolute right-0 top-0 left-0 z-50" x-show="humberger"
-						@click.away="humberger=false"
-						x-transition:enter="transition ease-out duration-300 -ml-64"
-						x-transition:enter-start="ease-out"
-						x-transition:enter-end=" transform translate-x-64"
-						x-transition:leave="transition ease-out duration-300"
-						x-transition:leave-start="ease-out"
-						x-transition:leave-end="transform -translate-x-64"
-					>
-						<div class="fixed top-0 left-0 bg-white shadow-2xl w-72 h-screen uppercase overflow-y-auto">
-							<div @click="humberger=false" class=" rounded-md p-2 bg-red-500 m-4 mx-2 text-white flex items-center justify-center cursor-pointer">
-								<span>
-									<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
-									</svg>
-								</span>
-							</div>
-							<div class="space-x-6 text-xs font-semibold w-full" x-data=" {active :'active1'}">
-								<ul class="w-full tracking-wider">
-									<li class=" duration-300 hover:shadow border-b border-t py-4 px-10">
-										<a href="index.html"
-										@click=" active='active1'"
-										:class="{'text-yellow-500': active==='active1'}"
-										>HOME</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
-										<a href="shop.html"
-										@click=" active='active2'"
-										:class="{'text-yellow-500': active==='active2'}"
-										>
-										New products
-										<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs z-10 capitalize px-4 text-white hover:text-white">New</span>
-										<span class="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
-										</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
-										<a href="shop.html"
-										@click=" active='active3'"
-										:class="{'text-yellow-500': active==='active3'}"
-										>Best sales
-										<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-red-600 text-xs z-10 capitalize px-5 text-white hover:text-white">Hot</span>
-										<span class="absolute top-5 right-16 p-1 bg-red-600 h-2 w-2 mr-1 transform rotate-45"></span>
-										</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="shop.html"
-										@click=" active='active4'"
-										:class="{'text-yellow-500': active==='active4'}"
-										>Shop</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="contact-us.html"
-										@click=" active='active5'"
-										:class="{'text-yellow-500': active==='active5'}"
-										>CONTACT</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="faq.html"
-										@click=" active='active6'"
-										:class="{'text-yellow-500': active==='active6'}"
-										>FAQ</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="terms-and-condition.html"
-										@click=" active='active8'"
-										:class="{'text-yellow-500': active==='active8'}"
-										>Terms & condition</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="privacy-policy.html"
-										@click=" active='active9'"
-										:class="{'text-yellow-500': active==='active9'}"
-										>Privacy & policy</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="login.html"
-										@click=" active='active10'"
-										:class="{'text-yellow-500': active==='active10'}"
-										>LogIn</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="registration.html"
-										@click=" active='active11'"
-										:class="{'text-yellow-500': active==='active11'}"
-										>Register</a>
-									</li>
-								</ul>
-							</div>
+					<div x-show="humberger"
+					@click.away="humberger = false"
+					x-transition:enter="transition ease-out top-0 duration-300 -ml-64"
+					x-transition:enter-start=""
+					x-transition:enter-end=" transform translate-x-64"
+					x-transition:leave="transition ease-out duration-300"
+					x-transition:leave-start=""
+					x-transition:leave-end="transform -translate-x-64"
+					class="fixed top-0 left-0 bg-white shadow-2xl w-72 h-screen uppercase overflow-y-auto z-50">
+						<div @click="humberger=false" class=" rounded-md p-2 bg-red-500 m-4 mx-2 text-white flex items-center justify-center cursor-pointer">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</span>
 						</div>
-					</nav>
+						<div class="space-x-6 text-xs font-semibold w-full" x-data=" {active :'active1'}">
+							<ul class="w-full tracking-wider">
+								<li class=" duration-300 hover:shadow border-b border-t py-4 px-10">
+									<a href="index.html"
+									@click=" active='active1'"
+									:class="{'text-yellow-500': active==='active1'}"
+									>HOME</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
+									<a href="shop.html"
+									@click=" active='active2'"
+									:class="{'text-yellow-500': active==='active2'}"
+									>
+									New products
+									<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs z-10 capitalize px-4 text-white hover:text-white">New</span>
+									<span class="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
+									</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
+									<a href="shop.html"
+									@click=" active='active3'"
+									:class="{'text-yellow-500': active==='active3'}"
+									>Best sales
+									<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-red-600 text-xs z-10 capitalize px-5 text-white hover:text-white">Hot</span>
+									<span class="absolute top-5 right-16 p-1 bg-red-600 h-2 w-2 mr-1 transform rotate-45"></span>
+									</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="shop.html"
+									@click=" active='active4'"
+									:class="{'text-yellow-500': active==='active4'}"
+									>Shop</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="contact-us.html"
+									@click=" active='active5'"
+									:class="{'text-yellow-500': active==='active5'}"
+									>CONTACT</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="faq.html"
+									@click=" active='active6'"
+									:class="{'text-yellow-500': active==='active6'}"
+									>FAQ</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="terms-and-condition.html"
+									@click=" active='active8'"
+									:class="{'text-yellow-500': active==='active8'}"
+									>Terms & condition</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="privacy-policy.html"
+									@click=" active='active9'"
+									:class="{'text-yellow-500': active==='active9'}"
+									>Privacy & policy</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="login.html"
+									@click=" active='active10'"
+									:class="{'text-yellow-500': active==='active10'}"
+									>LogIn</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="registration.html"
+									@click=" active='active11'"
+									:class="{'text-yellow-500': active==='active11'}"
+									>Register</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<!---------main Menu----------->
 					<ul class="hidden uppercase text-white font-bold lg:flex items-center space-x-1 text-sm">
 						<!----------->

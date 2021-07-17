@@ -31,6 +31,40 @@
 			.cursor-zoomin{
 				cursor: zoom-in;
 			}
+			/*------scroll bar---------------------*/
+			::-webkit-scrollbar {
+			width: 5px;
+			height: 7px;
+			}
+			::-webkit-scrollbar-button {
+			width: 0px;
+			height: 0px;
+			}
+			::-webkit-scrollbar-thumb {
+			background: #525965;
+			border: 0px none #ffffff;
+			border-radius: 0px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+			background: #525965;
+			}
+			::-webkit-scrollbar-thumb:active {
+			background: #525965;
+			}
+			::-webkit-scrollbar-track {
+			background: transparent;
+			border: 0px none #ffffff;
+			border-radius: 50px;
+			}
+			::-webkit-scrollbar-track:hover {
+			background: transparent;
+			}
+			::-webkit-scrollbar-track:active {
+			background: transparent;
+			}
+			::-webkit-scrollbar-corner {
+			background: transparent;
+			}
 		</style>
 	</head>
 	<body x-data="{sticky: true}" >
@@ -99,7 +133,7 @@
 						<a class=" text-gray-600" href="#">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter h-3 w-3" viewBox="0 0 16 16">
 								<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-							  </svg>
+							</svg>
 						</a>
 						<!------------------->
 						<a class=" text-gray-600" href="#">
@@ -117,7 +151,7 @@
 						<a class=" text-gray-600" href="#">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram h-3 w-3" viewBox="0 0 16 16">
 								<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-							  </svg>
+							</svg>
 						</a>
 						<!------------------->
 						<a class=" text-gray-600" href="#">
@@ -142,7 +176,7 @@
 					<button class="sm:px-6 p-2 bg-yellow-500 hover:bg-black text-white font-bold rounded-r">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
 						<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-					  </svg>
+					</svg>
 					</button>
 				</div>
 				<!---------003----------->
@@ -180,96 +214,94 @@
 						</span>
 					</button>
 					<!---------Mobile Menu----------->
-					<nav class="absolute right-0 top-0 left-0 z-50" x-show="humberger"
-						@click.away="humberger=false"
-						x-transition:enter="transition ease-out duration-300 -ml-64"
-						x-transition:enter-start="ease-out"
-						x-transition:enter-end=" transform translate-x-64"
-						x-transition:leave="transition ease-out duration-300"
-						x-transition:leave-start="ease-out"
-						x-transition:leave-end="transform -translate-x-64"
-					>
-						<div class="fixed top-0 left-0 bg-white shadow-2xl w-72 h-screen uppercase overflow-y-auto">
-							<div @click="humberger=false" class=" rounded-md p-2 bg-red-500 m-4 mx-2 text-white flex items-center justify-center cursor-pointer">
-								<span>
-									<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
-									</svg>
-								</span>
-							</div>
-							<div class="space-x-6 text-xs font-semibold w-full" x-data=" {active :'active1'}">
-								<ul class="w-full tracking-wider">
-									<li class=" duration-300 hover:shadow border-b border-t py-4 px-10">
-										<a href="index.html"
-										@click=" active='active1'"
-										:class="{'text-yellow-500': active==='active1'}"
-										>HOME</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
-										<a href="shop.html"
-										@click=" active='active2'"
-										:class="{'text-yellow-500': active==='active2'}"
-										>
-										New products
-										<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs z-10 capitalize px-4 text-white hover:text-white">New</span>
-										<span class="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
-										</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
-										<a href="shop.html"
-										@click=" active='active3'"
-										:class="{'text-yellow-500': active==='active3'}"
-										>Best sales
-										<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-red-600 text-xs z-10 capitalize px-5 text-white hover:text-white">Hot</span>
-										<span class="absolute top-5 right-16 p-1 bg-red-600 h-2 w-2 mr-1 transform rotate-45"></span>
-										</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="shop.html"
-										@click=" active='active4'"
-										:class="{'text-yellow-500': active==='active4'}"
-										>Shop</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="contact-us.html"
-										@click=" active='active5'"
-										:class="{'text-yellow-500': active==='active5'}"
-										>CONTACT</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="faq.html"
-										@click=" active='active6'"
-										:class="{'text-yellow-500': active==='active6'}"
-										>FAQ</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="terms-and-condition.html"
-										@click=" active='active8'"
-										:class="{'text-yellow-500': active==='active8'}"
-										>Terms & condition</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="privacy-policy.html"
-										@click=" active='active9'"
-										:class="{'text-yellow-500': active==='active9'}"
-										>Privacy & policy</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="login.html"
-										@click=" active='active10'"
-										:class="{'text-yellow-500': active==='active10'}"
-										>LogIn</a>
-									</li>
-									<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
-										<a href="registration.html"
-										@click=" active='active11'"
-										:class="{'text-yellow-500': active==='active11'}"
-										>Register</a>
-									</li>
-								</ul>
-							</div>
+					<div x-show="humberger"
+					@click.away="humberger = false"
+					x-transition:enter="transition ease-out top-0 duration-300 -ml-64"
+					x-transition:enter-start=""
+					x-transition:enter-end=" transform translate-x-64"
+					x-transition:leave="transition ease-out duration-300"
+					x-transition:leave-start=""
+					x-transition:leave-end="transform -translate-x-64"
+					class="fixed top-0 left-0 bg-white shadow-2xl w-72 h-screen uppercase overflow-y-auto z-50">
+						<div @click="humberger=false" class=" rounded-md p-2 bg-red-500 m-4 mx-2 text-white flex items-center justify-center cursor-pointer">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</span>
 						</div>
-					</nav>
+						<div class="space-x-6 text-xs font-semibold w-full" x-data=" {active :'active1'}">
+							<ul class="w-full tracking-wider">
+								<li class=" duration-300 hover:shadow border-b border-t py-4 px-10">
+									<a href="index.html"
+									@click=" active='active1'"
+									:class="{'text-yellow-500': active==='active1'}"
+									>HOME</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
+									<a href="shop.html"
+									@click=" active='active2'"
+									:class="{'text-yellow-500': active==='active2'}"
+									>
+									New products
+									<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs z-10 capitalize px-4 text-white hover:text-white">New</span>
+									<span class="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
+									</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative">
+									<a href="shop.html"
+									@click=" active='active3'"
+									:class="{'text-yellow-500': active==='active3'}"
+									>Best sales
+									<span class=" absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-red-600 text-xs z-10 capitalize px-5 text-white hover:text-white">Hot</span>
+									<span class="absolute top-5 right-16 p-1 bg-red-600 h-2 w-2 mr-1 transform rotate-45"></span>
+									</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="shop.html"
+									@click=" active='active4'"
+									:class="{'text-yellow-500': active==='active4'}"
+									>Shop</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="contact-us.html"
+									@click=" active='active5'"
+									:class="{'text-yellow-500': active==='active5'}"
+									>CONTACT</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="faq.html"
+									@click=" active='active6'"
+									:class="{'text-yellow-500': active==='active6'}"
+									>FAQ</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="terms-and-condition.html"
+									@click=" active='active8'"
+									:class="{'text-yellow-500': active==='active8'}"
+									>Terms & condition</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="privacy-policy.html"
+									@click=" active='active9'"
+									:class="{'text-yellow-500': active==='active9'}"
+									>Privacy & policy</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="login.html"
+									@click=" active='active10'"
+									:class="{'text-yellow-500': active==='active10'}"
+									>LogIn</a>
+								</li>
+								<li class=" duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10">
+									<a href="registration.html"
+									@click=" active='active11'"
+									:class="{'text-yellow-500': active==='active11'}"
+									>Register</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<!---------main Menu----------->
 					<ul class="hidden uppercase text-white font-bold lg:flex items-center space-x-1 text-sm">
 						<!----------->
@@ -329,8 +361,8 @@
 						<span class="">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
 								<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-							  </svg>
-							  <span class="lg:hidden absolute z-20 top-0 left-9 h-5 w-5 rounded-full box-border flex items-center justify-center bg-black text-xs text-white">0</span>
+							</svg>
+							<span class="lg:hidden absolute z-20 top-0 left-9 h-5 w-5 rounded-full box-border flex items-center justify-center bg-black text-xs text-white">0</span>
 						</span>
 						<div class="lg:flex hidden items-center space-x-2">
 							<span>My cart -</span>
